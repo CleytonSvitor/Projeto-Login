@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
         if(email.isEmpty()){
             editEmail.setError("Campo e-mail obrigatório");
             return;
+
         }
         if(senha.isEmpty()){
             editSenha.setError("Campo senha obrigatório");
