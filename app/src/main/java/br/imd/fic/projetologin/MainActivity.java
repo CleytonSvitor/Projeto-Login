@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
 
         String email = editEmail.getText().toString();
         String senha = editSenha.getText().toString();
-
+        //verifica se campo email
         if(email.isEmpty()){
             editEmail.setError("Campo e-mail obrigatório");
             return;
