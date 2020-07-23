@@ -32,6 +32,7 @@ public class CadastroActivity extends AppCompatActivity {
 
                 setResult(RESULT_OK, intent);
                 finish();
+
             }
         });
 
