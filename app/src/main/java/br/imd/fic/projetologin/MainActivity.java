@@ -1,5 +1,6 @@
 package br.imd.fic.projetologin;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -53,6 +54,23 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void cadastrar(View view) {
-        Toast.makeText(this, "Tela de cadastro", Toast.LENGTH_LONG).show();
+        //Toast.makeText(this, "Tela de cadastro", Toast.LENGTH_LONG).show();
+        Intent intent = new Intent(this, CadastroActivity.class);
+        startActivityForResult(intent, 10);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (requestCode == 10 && resultCode == RESULT_OK){
+            String email = data.getStringExtra("email");
+            String senha = data.getStringExtra("senha");
+
+            editEmail.setText(email);
+            editSenha.setText(senha);
+        }
+
+
     }
 }
